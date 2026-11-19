@@ -1,0 +1,743 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* Background dasar ice blue / pale blue dengan gradasi lembut natural */
+    background: linear-gradient(135deg, #edf7ff 0%, #e5f2ff 38%, #f3f8ff 70%, #eaf4ff 100%);
+    background-attachment: fixed;
+    color: #14234b;
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Ornamen teknologi asimetris: Lingkaran besar transparan + ring + aksen titik-titik */
+body::before {
+    content: "";
+    position: fixed;
+    top: -150px;
+    right: -150px;
+    width: 540px;
+    height: 540px;
+    border-radius: 50%;
+    background: 
+        radial-gradient(rgba(8, 124, 255, 0.12) 1.5px, transparent 1.5px) 0 0 / 20px 20px,
+        radial-gradient(circle, rgba(255, 255, 255, 0.65) 0%, rgba(220, 238, 255, 0.35) 50%, rgba(185, 221, 255, 0.12) 70%, transparent 71%);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 
+        0 0 0 35px rgba(255, 255, 255, 0.22),
+        0 0 0 75px rgba(8, 124, 255, 0.04);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Ornamen lingkaran geometris transparan sudut kiri */
+body::after {
+    content: "";
+    position: fixed;
+    bottom: -180px;
+    left: -180px;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.45) 0%, rgba(224, 242, 255, 0.25) 55%, transparent 70%);
+    border: 60px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 70px rgba(8, 124, 255, 0.05);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.auth-navbar,
+.auth-page {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.auth-navbar {
+    width: 100%;
+    height: 72px;
+
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e8eef8;
+}
+
+.auth-logo {
+    text-decoration: none;
+
+    font-size: 28px;
+    font-weight: 800;
+
+    color: #14234b;
+}
+
+.auth-logo span {
+    color: #087cff;
+}
+
+.back-home {
+    text-decoration: none;
+
+    color: #087cff;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.back-home:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   AUTH PAGE
+===================================================== */
+
+.auth-page {
+    min-height: calc(100vh - 72px);
+
+    padding: 50px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.auth-container {
+    width: 100%;
+    max-width: 1180px;
+
+    min-height: 650px;
+
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+
+    background: #ffffff;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 60px rgba(20, 75, 140, 0.12);
+}
+
+
+/* =====================================================
+   LEFT SIDE
+===================================================== */
+
+.auth-left {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf5ff 0%,
+            #d9ecff 55%,
+            #c5e1ff 100%
+        );
+
+    padding: 65px 60px;
+}
+
+
+/* dekorasi */
+
+.auth-decoration {
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.45);
+}
+
+.circle-one {
+    width: 420px;
+    height: 420px;
+
+    right: -180px;
+    top: -170px;
+}
+
+.circle-two {
+    width: 300px;
+    height: 300px;
+
+    left: -170px;
+    bottom: -150px;
+}
+
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+
+.auth-left-content {
+    position: relative;
+    z-index: 2;
+}
+
+.auth-badge {
+    display: inline-block;
+
+    padding: 9px 18px;
+
+    margin-bottom: 22px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    color: #087cff;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.auth-left h1 {
+    max-width: 480px;
+
+    font-size: 45px;
+    line-height: 1.15;
+
+    color: #10234d;
+
+    margin-bottom: 18px;
+}
+
+.auth-left h1 span {
+    color: #087cff;
+}
+
+.auth-left p {
+    max-width: 460px;
+
+    color: #536887;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   PRODUCTS
+===================================================== */
+
+.auth-products {
+    position: relative;
+
+    width: 100%;
+    height: 300px;
+
+    margin-top: 10px;
+}
+
+.floating-product {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating-product img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 18px 18px rgba(24, 70, 120, 0.18)
+        );
+}
+
+
+/* laptop */
+
+.product-laptop {
+    width: 260px;
+    height: 210px;
+
+    left: 0;
+    bottom: 10px;
+
+    z-index: 3;
+}
+
+
+/* phone */
+
+.product-phone {
+    width: 125px;
+    height: 175px;
+
+    left: 220px;
+    bottom: 40px;
+
+    z-index: 4;
+}
+
+
+/* headphone */
+
+.product-headphone {
+    width: 180px;
+    height: 180px;
+
+    right: 0;
+    bottom: 15px;
+
+    z-index: 5;
+}
+
+
+/* =====================================================
+   RIGHT SIDE
+===================================================== */
+
+.auth-right {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 45px;
+}
+
+
+/* =====================================================
+   LOGIN CARD
+===================================================== */
+
+.login-card {
+    width: 100%;
+    max-width: 430px;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.login-header {
+    margin-bottom: 32px;
+}
+
+.login-header h2 {
+    font-size: 30px;
+
+    color: #14234b;
+
+    margin-bottom: 9px;
+}
+
+.login-header p {
+    color: #71809c;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.form-group {
+    margin-bottom: 23px;
+}
+
+.form-group label,
+.password-label label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #26385f;
+}
+
+
+/* password label */
+
+.password-label {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.password-label a {
+    color: #087cff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+
+    left: 17px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 16px;
+
+    opacity: 0.65;
+
+    z-index: 2;
+}
+
+.input-wrapper input {
+    width: 100%;
+
+    height: 52px;
+
+    padding: 0 48px;
+
+    border: 1px solid #dce5f1;
+
+    border-radius: 12px;
+
+    background: #fbfdff;
+
+    color: #1d2d52;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.input-wrapper input:focus {
+    border-color: #087cff;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px rgba(8, 124, 255, 0.08);
+}
+
+.input-wrapper input::placeholder {
+    color: #a2aec1;
+}
+
+
+/* =====================================================
+   SHOW PASSWORD
+===================================================== */
+
+.show-password {
+    position: absolute;
+
+    right: 15px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    opacity: 0.65;
+}
+
+
+/* =====================================================
+   REMEMBER
+===================================================== */
+
+.remember {
+    margin-bottom: 22px;
+}
+
+.remember label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #687895;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.remember input {
+    width: 16px;
+    height: 16px;
+
+    accent-color: #087cff;
+}
+
+
+/* =====================================================
+   LOGIN BUTTON
+===================================================== */
+
+.login-button {
+    width: 100%;
+
+    height: 53px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #087cff,
+            #0065e5
+        );
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    box-shadow:
+        0 10px 22px rgba(8, 124, 255, 0.22);
+
+    transition: 0.2s;
+}
+
+.login-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 28px rgba(8, 124, 255, 0.28);
+}
+
+
+/* =====================================================
+   REGISTER
+===================================================== */
+
+.register-text {
+    margin-top: 23px;
+
+    text-align: center;
+
+    color: #71809c;
+
+    font-size: 14px;
+}
+
+.register-text a {
+    color: #087cff;
+
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.auth-divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 27px 0;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #e7edf5;
+}
+
+.auth-divider span {
+    color: #a0aabd;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   HOME BUTTON
+===================================================== */
+
+.home-button {
+    width: 100%;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #dce6f2;
+
+    border-radius: 11px;
+
+    color: #526481;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.home-button:hover {
+    border-color: #087cff;
+
+    color: #087cff;
+
+    background: #f5faff;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 950px) {
+
+    .auth-container {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-left {
+        min-height: 500px;
+    }
+
+    .auth-right {
+        padding: 50px 30px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .auth-navbar {
+        padding: 0 20px;
+    }
+
+    .back-home {
+        display: none;
+    }
+
+    .auth-page {
+        padding: 25px 15px;
+    }
+
+    .auth-left {
+        padding: 45px 30px;
+    }
+
+    .auth-left h1 {
+        font-size: 35px;
+    }
+
+    .auth-products {
+        height: 230px;
+    }
+
+    .product-laptop {
+        width: 200px;
+        height: 160px;
+    }
+
+    .product-phone {
+        width: 90px;
+        height: 130px;
+
+        left: 160px;
+    }
+
+    .product-headphone {
+        width: 130px;
+        height: 130px;
+    }
+
+    .auth-right {
+        padding: 40px 25px;
+    }
+
+}

@@ -1,0 +1,183 @@
+/* Flexslider.css - slideshow banner NexTech */
+.hero.hero-full-banner .flexslider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.flexslider .slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.flexslider .slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 650ms ease;
+    pointer-events: none;
+}
+.flexslider .slide.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    z-index: 1;
+}
+.flexslider .slide-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    background-color: #f4f6fa;
+}
+.flexslider .slide-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0 0 5.5% max(5%, calc((100% - 1250px) / 2 + 5px));
+    pointer-events: none;
+}
+.flexslider .slide-overlay .hero-button {
+    pointer-events: auto;
+}
+.flexslider .slider-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    transform: translateY(-50%);
+    border: 1px solid rgba(255,255,255,.75);
+    border-radius: 50%;
+    background: rgba(16,36,92,.48);
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background .2s, transform .2s;
+}
+.flexslider .slider-arrow:hover {
+    background: #087cff;
+    transform: translateY(-50%) scale(1.05);
+}
+.flexslider .slider-prev { left: 20px; }
+.flexslider .slider-next { right: 20px; }
+.flexslider .slider-dots {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    transform: translateX(-50%);
+}
+.flexslider .slider-dot {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: rgba(255,255,255,.6);
+    cursor: pointer;
+    transition: width .2s, background .2s;
+}
+.flexslider .slider-dot.active {
+    width: 25px;
+    border-radius: 10px;
+    background: #087cff;
+}
+@media (max-width: 768px) {
+    .hero.hero-full-banner { height: clamp(240px, 55vw, 380px); }
+    .flexslider .slide-overlay { padding: 0 0 7% 5%; }
+    .flexslider .slide-overlay .hero-button { padding: 11px 17px; font-size: 13px; }
+    .flexslider .slider-arrow { width: 36px; height: 36px; font-size: 15px; }
+    .flexslider .slider-prev { left: 10px; }
+    .flexslider .slider-next { right: 10px; }
+    .flexslider .slider-dots { bottom: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .flexslider .slide { transition: none; }
+}
+
+
+/* Ukuran dan posisi slideshow NexTech */
+.hero.hero-full-banner {
+    position: relative;
+    width: 90%;
+    max-width: 1250px;
+    height: clamp(280px, 32vw, 440px);
+    overflow: hidden;
+    padding: 0;
+    margin: 28px auto 20px;
+    border-radius: 20px;
+    background: linear-gradient(125deg, #d4e8ff 0%, #a8d3ff 40%, #76b7ff 80%, #5ca9ff 100%);
+    border: 1.5px solid #a8d2fb;
+    box-shadow: 0 14px 40px rgba(8, 124, 255, 0.16), 0 4px 14px rgba(16, 36, 92, 0.08);
+}
+
+.hero.hero-full-banner .flexslider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.flexslider .slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.flexslider .slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease;
+    border-radius: 20px;
+}
+
+.flexslider .slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+.flexslider .slide-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.flexslider .slide-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 5% 10%;
+    pointer-events: none;
+}
+
+.flexslider .slide-overlay .hero-button {
+    pointer-events: auto;
+}
+
+.flexslider .slider-arrow {
+    z-index: 5;
+}
+
+.flexslider .slider-dots {
+    z-index: 5;
+}

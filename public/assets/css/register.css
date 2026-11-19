@@ -1,0 +1,994 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #edf7ff 0%, #e5f2ff 38%, #f3f8ff 70%, #eaf4ff 100%);
+    background-attachment: fixed;
+    color: #102c68;
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Ornamen teknologi asimetris register */
+body::before {
+    content: "";
+    position: fixed;
+    top: -150px;
+    right: -150px;
+    width: 540px;
+    height: 540px;
+    border-radius: 50%;
+    background: 
+        radial-gradient(rgba(8, 124, 255, 0.12) 1.5px, transparent 1.5px) 0 0 / 20px 20px,
+        radial-gradient(circle, rgba(255, 255, 255, 0.65) 0%, rgba(220, 238, 255, 0.35) 50%, rgba(185, 221, 255, 0.12) 70%, transparent 71%);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 
+        0 0 0 35px rgba(255, 255, 255, 0.22),
+        0 0 0 75px rgba(8, 124, 255, 0.04);
+    pointer-events: none;
+    z-index: 0;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    bottom: -180px;
+    left: -180px;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.45) 0%, rgba(224, 242, 255, 0.25) 55%, transparent 70%);
+    border: 60px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 70px rgba(8, 124, 255, 0.05);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* =========================================================
+   HALAMAN REGISTER
+========================================================= */
+
+.register-page {
+    min-height: 100vh;
+    display: flex;
+    padding: 24px;
+    gap: 24px;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+/* =========================================================
+   BAGIAN KIRI
+========================================================= */
+
+.register-left {
+
+    position: relative;
+
+    width: 52%;
+
+    min-height: calc(100vh - 48px);
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #edf7ff 0%,
+            #dceeff 55%,
+            #d3eaff 100%
+        );
+
+    padding: 40px 70px;
+
+}
+
+
+
+/* =========================================================
+   LOGO
+======================================================== */
+
+.brand-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 12px 24px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.8);
+
+    color: #087cff;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+.brand-badge span {
+
+    color: #0b3a87;
+
+}
+
+
+
+/* =========================================================
+   TEKS KIRI
+========================================================= */
+
+.left-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    margin-top: 38px;
+
+    max-width: 570px;
+
+}
+
+
+.left-content h1 {
+
+    font-size: 54px;
+
+    line-height: 1.12;
+
+    letter-spacing: -1.5px;
+
+    color: #112e68;
+
+    font-weight: 800;
+
+}
+
+
+.left-content h1 span {
+
+    color: #087cff;
+
+}
+
+
+.left-content p {
+
+    margin-top: 28px;
+
+    max-width: 560px;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    color: #4e6a93;
+
+}
+
+
+
+/* =========================================================
+   PRODUK
+========================================================= */
+
+.register-products {
+
+    position: absolute;
+
+    left: 70px;
+
+    right: 50px;
+
+    bottom: 65px;
+
+    height: 300px;
+
+    z-index: 4;
+
+}
+
+
+
+/* GAMBAR UMUM */
+
+.register-product {
+
+    position: absolute;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 15px 18px
+            rgba(40, 91, 150, 0.15)
+        );
+
+}
+
+
+
+/* LAPTOP */
+
+.product-laptop {
+
+    width: 285px;
+
+    left: 0;
+
+    bottom: 10px;
+
+}
+
+
+
+/* SMARTPHONE */
+
+.product-phone {
+
+    width: 180px;
+
+    left: 285px;
+
+    bottom: 30px;
+
+}
+
+
+
+/* HEADPHONE */
+
+.product-headphone {
+
+    width: 210px;
+
+    right: 0;
+
+    bottom: 25px;
+
+}
+
+
+
+/* =========================================================
+   DEKORASI LINGKARAN
+========================================================= */
+
+.circle {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.42
+    );
+
+    z-index: 1;
+
+}
+
+
+.circle-top {
+
+    width: 390px;
+
+    height: 390px;
+
+    top: -220px;
+
+    right: -120px;
+
+}
+
+
+.circle-bottom {
+
+    width: 420px;
+
+    height: 420px;
+
+    bottom: -270px;
+
+    left: -180px;
+
+}
+
+
+
+/* =========================================================
+   BAGIAN KANAN
+========================================================= */
+
+.register-right {
+
+    width: 48%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+}
+
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.register-card {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    padding: 40px 46px;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 15px 45px
+        rgba(30, 91, 150, 0.08);
+
+}
+
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.register-header h2 {
+
+    font-size: 36px;
+
+    color: #102c68;
+
+    margin-bottom: 8px;
+
+    font-weight: 800;
+
+}
+
+
+.register-header p {
+
+    font-size: 15px;
+
+    color: #6480a8;
+
+    line-height: 1.5;
+
+    margin-bottom: 28px;
+
+}
+
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.alert-error {
+
+    background: #fff1f1;
+
+    border: 1px solid #ffbcbc;
+
+    color: #d72828;
+
+    padding: 14px 18px;
+
+    border-radius: 10px;
+
+    margin-bottom: 22px;
+
+    font-size: 14px;
+
+}
+
+
+.alert-error strong {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+}
+
+
+.alert-error ul {
+
+    margin-left: 20px;
+
+}
+
+
+.alert-success {
+
+    background: #effff4;
+
+    border: 1px solid #9be0af;
+
+    color: #238044;
+
+    padding: 14px 18px;
+
+    border-radius: 10px;
+
+    margin-bottom: 22px;
+
+}
+
+
+
+/* =========================================================
+   FORM ROW
+========================================================= */
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 18px;
+
+}
+
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+
+    margin-bottom: 18px;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #102f6d;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.input-box {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    height: 52px;
+
+    border: 1px solid #cbdced;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    transition: 0.2s ease;
+
+}
+
+
+.input-box:focus-within {
+
+    border-color: #087cff;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(8,124,255,0.10);
+
+}
+
+
+.input-icon {
+
+    width: 42px;
+
+    text-align: center;
+
+    font-size: 16px;
+
+    color: #6484ad;
+
+}
+
+
+.input-box input {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    padding: 0 12px 0 0;
+
+    font-size: 14px;
+
+    color: #19376e;
+
+}
+
+
+.input-box input::placeholder {
+
+    color: #9aadc5;
+
+}
+
+
+
+/* =========================================================
+   TOMBOL REGISTER
+========================================================= */
+
+.register-button {
+
+    width: 100%;
+
+    height: 52px;
+
+    margin-top: 6px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #087cff;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+    box-shadow:
+        0 8px 18px
+        rgba(8,124,255,0.20);
+
+}
+
+
+.register-button span {
+
+    margin-left: 12px;
+
+    font-size: 18px;
+
+}
+
+
+.register-button:hover {
+
+    background: #066fe4;
+
+    transform: translateY(-1px);
+
+}
+
+
+
+/* =========================================================
+   LOGIN LINK
+========================================================= */
+
+.login-link {
+
+    text-align: center;
+
+    margin-top: 22px;
+
+    font-size: 14px;
+
+    color: #7086a7;
+
+}
+
+
+.login-link a {
+
+    color: #087cff;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    margin-left: 4px;
+
+}
+
+
+.login-link a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+
+/* =========================================================
+   SEPARATOR
+========================================================= */
+
+.separator {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin: 24px 0;
+
+}
+
+
+.separator span {
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #dce5ef;
+
+}
+
+
+.separator p {
+
+    color: #8b9bb0;
+
+    font-size: 14px;
+
+}
+
+
+
+/* =========================================================
+   KEMBALI KE BERANDA
+========================================================= */
+
+.back-home {
+
+    width: 100%;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    border: 1px solid #d4e2f0;
+
+    border-radius: 11px;
+
+    color: #4b6386;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    background: #ffffff;
+
+    transition: 0.2s ease;
+
+}
+
+
+.back-home span {
+
+    font-size: 19px;
+
+}
+
+
+.back-home:hover {
+
+    border-color: #087cff;
+
+    color: #087cff;
+
+    background: #f7fbff;
+
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .register-page {
+
+        padding: 15px;
+
+    }
+
+
+    .register-left {
+
+        padding: 35px;
+
+    }
+
+
+    .left-content h1 {
+
+        font-size: 43px;
+
+    }
+
+
+    .left-content p {
+
+        font-size: 17px;
+
+    }
+
+
+    .register-products {
+
+        left: 35px;
+
+        right: 25px;
+
+    }
+
+
+    .product-laptop {
+
+        width: 230px;
+
+    }
+
+
+    .product-phone {
+
+        width: 145px;
+
+        left: 220px;
+
+    }
+
+
+    .product-headphone {
+
+        width: 175px;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   TABLET / HP
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .register-page {
+
+        display: block;
+
+        padding: 0;
+
+    }
+
+
+    .register-left {
+
+        width: 100%;
+
+        min-height: 520px;
+
+        border-radius: 0;
+
+        padding: 35px 30px;
+
+    }
+
+
+    .register-right {
+
+        width: 100%;
+
+        padding: 30px 20px;
+
+    }
+
+
+    .register-card {
+
+        max-width: 700px;
+
+        padding: 35px 25px;
+
+        box-shadow: none;
+
+    }
+
+
+    .register-products {
+
+        left: 40px;
+
+        right: 40px;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   HP KECIL
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .register-left {
+
+        min-height: 470px;
+
+        padding: 25px 22px;
+
+    }
+
+
+    .left-content {
+
+        margin-top: 30px;
+
+    }
+
+
+    .left-content h1 {
+
+        font-size: 36px;
+
+    }
+
+
+    .left-content p {
+
+        font-size: 15px;
+
+        margin-top: 18px;
+
+    }
+
+
+    .register-products {
+
+        left: 20px;
+
+        right: 20px;
+
+        bottom: 25px;
+
+        height: 180px;
+
+    }
+
+
+    .product-laptop {
+
+        width: 170px;
+
+    }
+
+
+    .product-phone {
+
+        width: 105px;
+
+        left: 155px;
+
+    }
+
+
+    .product-headphone {
+
+        width: 125px;
+
+    }
+
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+    }
+
+
+    .register-card {
+
+        padding: 25px 18px;
+
+    }
+
+
+    .register-header h2 {
+
+        font-size: 30px;
+
+    }
+
+}
